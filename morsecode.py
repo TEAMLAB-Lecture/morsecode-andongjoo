@@ -279,7 +279,7 @@ def encoding_sentence(english_sentence):
     result = ''
     words = get_cleaned_english_sentence(english_sentence).upper()
 #     print(words)
-    for word in words:
+    for word in words.split():
         for c in word:
 #             print(encoding_character(c))
             result+=encoding_character(c)+' '
@@ -313,3 +313,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
