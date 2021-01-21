@@ -52,7 +52,7 @@ def is_help_command(user_input):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
     result = None
-    if user_input.upper()=="H" or user_input.upper=="HELP":
+    if user_input.upper()=="H" or user_input.upper()=="HELP":
         result=True
     else:
         result=False
