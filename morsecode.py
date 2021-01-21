@@ -127,11 +127,11 @@ def is_validated_morse_code(user_input):
     morse_code_dict = get_morse_code_dict()
     
     for i in user_input:
-        if c not in  "..,":
+        if i not in  "..,":
             return False
     
     for morse_code in user_input.split():
-        if morse_coder not in morse_code_dict.values():
+        if morse_code not in morse_code_dict.values():
             result= False
 
     return result
@@ -277,7 +277,7 @@ def encoding_sentence(english_sentence):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
     result = ""
-    words = [word for word in get_cleaned_english_sentence(english_sentence).split()]
+    words = get_cleaned_english_sentence(english_sentence).upper()
 #     print(words)
     for word in words:
         for c in word:
