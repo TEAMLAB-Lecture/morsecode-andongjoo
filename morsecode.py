@@ -276,7 +276,7 @@ def encoding_sentence(english_sentence):
     """
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
-    result = ""
+    result = ''
     words = get_cleaned_english_sentence(english_sentence).upper()
 #     print(words)
     for word in words:
@@ -296,7 +296,7 @@ def main():
     while user_input !='0':
         if is_help_command(user_input):
             print(get_help_message())
-        elif is_validated_morse_coded_english_sentence(user_input):
+        elif is_validated_english_sentence(user_input):
             print(encoding_sentence(user_input))
         elif is_validated_morse_code(user_input):
             print(decoding_sentence(user_input))
