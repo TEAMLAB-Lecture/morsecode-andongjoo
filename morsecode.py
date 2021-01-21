@@ -127,14 +127,14 @@ def is_validated_morse_code(user_input):
     morse_code_dict = get_morse_code_dict()
     
     for i in user_input:
-        if i not in  "..,":
+        if i not in  "-.,":
             return False
     
     for morse_code in user_input.split():
         if morse_code not in morse_code_dict.values():
-            result= False
+            return False
 
-    return result
+    return True
     # ==================================
 
 
@@ -283,7 +283,8 @@ def encoding_sentence(english_sentence):
         for c in word:
 #             print(encoding_character(c))
             result+=encoding_character(c)+' '
-        result+=' '
+        result += ' '
+    result=result.strip()
     return result
     # ==================================
 
@@ -295,7 +296,7 @@ def main():
     while user_input !='0':
         if is_help_command(user_input):
             print(get_help_message())
-        elif is_validated_english_sentence(user_input):
+        elif is_validated_morse_coded_english_sentence(user_input):
             print(encoding_sentence(user_input))
         elif is_validated_morse_code(user_input):
             print(decoding_sentence(user_input))
