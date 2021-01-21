@@ -87,15 +87,13 @@ def is_validated_english_sentence(user_input):
     """
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
-    result = True
-    if not user_input:
-        result=False
-    
+    result=True
     for i in user_input:
-        if not i.isalpha() and i!=' ':
+        if i in unavailable:
             result=False
-
-    return result
+    if not user_input.replace('.','').replace(',','').replace('!','').replace('?','').replace(' ',''):
+        result=False
+    return True
     # ==================================
 
 
