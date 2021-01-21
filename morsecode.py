@@ -94,7 +94,7 @@ def is_validated_english_sentence(user_input):
             result=False
     if not user_input.replace('.','').replace(',','').replace('!','').replace('?','').replace(' ',''):
         result=False
-    return True
+    return result
     # ==================================
 
 
